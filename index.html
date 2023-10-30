@@ -71,7 +71,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}.gjs-shape-divider > svg{height:100%;width:100%;transform:scaleY(-1);}.gjs-shape-divider--fl-v > svg{transform:scaleY(1);}.gjs-shape-divider--fl-h > svg{transform:scaleX(-1) scaleY(-1);}.gjs-shape-divider--fl-v-h > svg{transform:scaleY(1) scaleX(-1);}.gjs-shape-divider > svg > path{fill:currentcolor;}.gjs-shape-divider-inv > path{transform:scale(-1, -1) translate(-100%, -100%);}.card{padding:0;margin:15px 10px;border-radius:16px !important;overflow:hidden;}#iwye{width:18rem;}
+* { box-sizing: border-box; } body {margin: 0;}.gjs-shape-divider > svg{height:100%;width:100%;transform:scaleY(-1);}.gjs-shape-divider--fl-v > svg{transform:scaleY(1);}.gjs-shape-divider--fl-h > svg{transform:scaleX(-1) scaleY(-1);}.gjs-shape-divider--fl-v-h > svg{transform:scaleY(1) scaleX(-1);}.gjs-shape-divider > svg > path{fill:currentcolor;}.gjs-shape-divider-inv > path{transform:scale(-1, -1) translate(-100%, -100%);}.card{padding:0;margin:15px 10px;border-radius:16px !important;overflow:hidden;}#iwye{width:18rem;}#ipbe{color:red;}
 
 </style>
 
@@ -86,7 +86,7 @@
      <div class="card-body mt-3 mb-3">
       <div class="row">
        <div class="col-10">
-        <h4 class="card-title">Product title</h4>
+        <h4 id="ipbe" class="card-title">Product title</h4>
         <p class="card-text"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i> (123)</p>
        </div>
        <div class="col-2">
@@ -106,6 +106,15 @@
    </div>
    <p class="mt-5 text-center">Get a step-by-step written explanation here: <a href="https://codingyaar.com/product-card-bootstrap-html" target="_blank">Bootstrap 5 Product Card</a></p>
   </div>
+  <script>var items = document.querySelectorAll('#ipbe');
+          for (var i = 0, len = items.length; i < len; i++) {
+            (function(){
+let el = this
+el.addEventListener('click', function() {
+  alert('hello')
+})
+}.bind(items[i]))();
+          }</script>
  </body>
 </html>
 </html>
